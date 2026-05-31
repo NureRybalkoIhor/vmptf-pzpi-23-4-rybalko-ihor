@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/style.css' %}">
+<!DOCTYPE html>
+<html>
+<head><title>Article Form</title></head>
+
+<body>
+    <h1>{% if article %}Edit{% else %}Create{% endif %} Article</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" value="{{ article.title }}" placeholder="Title"><br>
+        <textarea name="content">{{ article.content }}</textarea><br>
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'article_list' %}">Back</a>
+</body>
+</html>
