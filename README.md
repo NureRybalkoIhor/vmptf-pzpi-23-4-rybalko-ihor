@@ -1,1 +1,0 @@
-# vmptf-pzpi-23-4-rybalko-ihor
