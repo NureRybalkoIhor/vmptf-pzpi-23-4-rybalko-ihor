@@ -12,6 +12,9 @@ db.sqlite3-journal
 venv/
 ENV/
 env/
+.env
+.env.local
+.env.*.local
 
 # IDEs
 .vscode/
@@ -20,3 +23,15 @@ env/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Node / JS / build tools
+node_modules/
+dist/
+dist-ssr/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.eslintcache
