@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:mipmap/sym_def_app_icon"
+        android:label="Sea Breeze Store"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lab3">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".FavoritesActivity"
+            android:exported="false"
+            android:label="Обрані товари" />
+
+        <activity
+            android:name=".CartActivity"
+            android:exported="false"
+            android:label="Кошик" />
+
+        <activity
+            android:name=".CheckoutActivity"
+            android:exported="false"
+            android:label="Оформлення" />
+
+        <activity
+            android:name=".OrderConfirmationActivity"
+            android:exported="false"
+            android:label="Замовлення підтверджено" />
+
+        <activity
+            android:name=".OrdersActivity"
+            android:exported="false"
+            android:label="Мої замовлення" />
+
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false"
+            android:label="Панель адміна" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="Вхід" />
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="Реєстрація" />
+
+        <activity
+            android:name=".RecommendationsActivity"
+            android:exported="false"
+            android:label="Рекомендації" />
+
+    </application>
+
+</manifest>

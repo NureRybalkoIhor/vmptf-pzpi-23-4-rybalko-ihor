@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_light_blue">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="4dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="Sea Breeze Store"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_teal" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/btnRecommendations"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@android:drawable/btn_star"
+                    android:contentDescription="Recommendations"
+                    app:tint="@color/primary_teal" />
+
+                <ImageView
+                    android:id="@+id/btnFavorites"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@android:drawable/btn_star_big_on"
+                    android:contentDescription="Favorites"
+                    app:tint="@color/primary_teal" />
+
+                <RelativeLayout
+                    android:id="@+id/btnCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@android:drawable/ic_menu_save"
+                        android:contentDescription="Cart"
+                        app:tint="@color/primary_teal" />
+
+                    <TextView
+                        android:id="@+id/tvCartBadge"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@android:color/holo_red_dark"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="0"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/btnProfile"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    android:contentDescription="Profile"
+                    app:tint="@color/primary_teal" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp">
+
+        <RadioGroup
+            android:id="@+id/rgCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbAll"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Всі"
+                android:checked="true"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:drawable/btn_default"
+                android:textColor="@color/text_dark" />
+
+            <RadioButton
+                android:id="@+id/rbElectronics"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Електроніка"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:drawable/btn_default"
+                android:textColor="@color/text_dark" />
+
+            <RadioButton
+                android:id="@+id/rbAccessories"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Аксесуари"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:drawable/btn_default"
+                android:textColor="@color/text_dark" />
+
+            <RadioButton
+                android:id="@+id/rbLifestyle"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Стиль життя"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:background="@android:drawable/btn_default"
+                android:textColor="@color/text_dark" />
+
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
