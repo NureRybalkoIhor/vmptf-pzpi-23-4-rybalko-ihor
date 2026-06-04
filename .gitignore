@@ -35,3 +35,18 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 .eslintcache
+
+# Android / Gradle
+.gradle/
+build/
+app/build/
+local.properties
+.cxx/
+*.apk
+*.ap_
+*.aab
+.navigation/
+captures/
+*.keystore
+*.jks
+
