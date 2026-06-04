@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F8FF"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caffeine Cache Benchmark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#008080"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRunBenchmark"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Run Caching Speed Benchmark"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#008080"
+        android:layout_marginBottom="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Benchmark Logs Output"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#008080"
+        android:layout_marginBottom="8dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvBenchmarkLogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logs will appear here after clicking benchmark button..."
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:fontFamily="monospace" />
+
+    </ScrollView>
+
+</LinearLayout>

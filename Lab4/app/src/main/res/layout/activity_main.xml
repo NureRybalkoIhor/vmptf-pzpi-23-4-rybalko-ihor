@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F8FF"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hotel Booking System"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#008080"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/mainSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORM Exposed &amp; Caffeine Caching"
+        android:textSize="16sp"
+        android:textColor="#00A8A8"
+        android:layout_marginBottom="48dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBookRooms"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Book Hotel Rooms"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#008080"
+        android:layout_marginBottom="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCacheBenchmark"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Caffeine Cache Benchmark"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#008080"
+        android:layout_marginBottom="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSqlInjection"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="SQL Injection Sandbox"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#008080"
+        android:insetTop="0dp"
+        android:insetBottom="0dp" />
+
+</LinearLayout>

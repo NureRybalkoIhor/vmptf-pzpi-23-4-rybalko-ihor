@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F8FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel Booking Panel"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#008080"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Booking Dates"
+                    android:textStyle="bold"
+                    android:textColor="#008080"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginRight="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check In Date"
+                            android:textSize="12sp"
+                            android:textColor="#888888"/>
+
+                        <TextView
+                            android:id="@+id/tvCheckIn"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="#E8F4F8"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:textColor="#008080"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:text="2026-06-04" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check Out Date"
+                            android:textSize="12sp"
+                            android:textColor="#888888"/>
+
+                        <TextView
+                            android:id="@+id/tvCheckOut"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="#E8F4F8"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:textColor="#008080"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:text="2026-06-07" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSearchRooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Check Available Rooms"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#008080"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Rooms"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#008080"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAvailableRooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active Bookings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#008080"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvActiveBookings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
